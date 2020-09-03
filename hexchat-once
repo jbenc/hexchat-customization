@@ -1,0 +1,6 @@
+#!/bin/bash
+if pidof hexchat &> /dev/null; then
+	hexchat -e -c 'focus'
+else
+	hexchat
+fi
