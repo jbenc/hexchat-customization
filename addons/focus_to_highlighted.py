@@ -9,8 +9,11 @@ context_list = []
 
 def push_context(word, word_eol, userdata):
     context = hexchat.get_context()
-    if not context in context_list:
-        context_list.append(context)
+    try:
+        context_list.remove(context)
+    except ValueError:
+        pass
+    context_list.append(context)
     return hexchat.EAT_NONE
 
 
