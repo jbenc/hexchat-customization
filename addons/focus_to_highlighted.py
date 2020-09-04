@@ -28,7 +28,7 @@ def switch_focus(word, word_eol, userdata):
     try:
         last = context_list.pop()
     except IndexError:
-        return hexchat.EAT_NONE
+        return hexchat.EAT_ALL
     last.command('GUI FOCUS')
     return hexchat.EAT_ALL
 
